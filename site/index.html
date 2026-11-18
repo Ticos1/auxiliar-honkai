@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#12131a">
+<title>Auxiliar Star Rail</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="lock" class="lock">
+  <form id="lockForm" class="card lock-card" autocomplete="on">
+    <img src="icon.svg" alt="" width="56" height="56">
+    <h1>Auxiliar Star Rail</h1>
+    <p class="muted">Digite a senha para abrir os dados da sua conta.</p>
+    <input id="pw" type="password" name="password" placeholder="Senha" autocomplete="current-password" required>
+    <label class="check"><input id="remember" type="checkbox"> Lembrar neste aparelho</label>
+    <button type="submit">Entrar</button>
+    <p id="lockMsg" class="error" role="alert"></p>
+  </form>
+</main>
+
+<div id="app" hidden>
+  <header class="top">
+    <div>
+      <strong id="player">—</strong>
+      <span id="updated" class="muted small"></span>
+    </div>
+    <button id="logout" class="ghost small" type="button">Sair</button>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="home" aria-selected="true">Início</button>
+    <button role="tab" data-tab="teams">Times</button>
+    <button role="tab" data-tab="chars">Builds</button>
+    <button role="tab" data-tab="banners">Banners</button>
+    <button role="tab" data-tab="content">Conteúdo</button>
+  </nav>
+  <section id="view" class="view"></section>
+  <footer class="muted small foot" id="foot"></footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
